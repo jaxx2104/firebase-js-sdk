@@ -109,7 +109,7 @@ export class Document extends MaybeDocument {
  * Compares the value for field `field` in the provided documents. Throws if
  * the field does not exist in both documents.
  */
-export function compareDocumentsByField(
+export function compareDocsByField(
   field: FieldPath,
   d1: Document,
   d2: Document

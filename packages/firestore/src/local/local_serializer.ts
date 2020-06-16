@@ -29,7 +29,7 @@ import * as api from '../protos/firestore_proto_api';
 import { JsonProtoSerializer } from '../remote/serializer';
 import { debugAssert, fail } from '../util/assert';
 import { ByteString } from '../util/byte_string';
-import { Target } from '../core/target';
+import { canonifyTarget, Target } from '../core/target';
 import {
   DbMutationBatch,
   DbNoDocument,
@@ -223,7 +223,7 @@ export class LocalSerializer {
     // lastListenSequenceNumber is always 0 until we do real GC.
     return new DbTarget(
       targetData.targetId,
-      targetData.target.canonicalId(),
+      canonifyTarget(targetData.target),
       dbTimestamp,
       resumeToken,
       targetData.sequenceNumber,

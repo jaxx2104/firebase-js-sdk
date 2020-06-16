@@ -34,7 +34,7 @@ import {
 import { Timestamp } from '../../../src/api/timestamp';
 import * as persistenceHelpers from './persistence_test_helpers';
 import { TestTargetCache } from './test_target_cache';
-import { Target } from '../../../src/core/target';
+import { canonifyTarget, Target } from '../../../src/core/target';
 
 describe('MemoryTargetCache', () => {
   genericTargetCacheTests(persistenceHelpers.testMemoryEagerPersistence);
@@ -174,7 +174,7 @@ function genericTargetCacheTests(
     const q2 = Query.atPath(path('a'))
       .addFilter(filter('foo', '==', '1'))
       .toTarget();
-    expect(q1.canonicalId()).to.equal(q2.canonicalId());
+    expect(canonifyTarget(q1)).to.equal(canonifyTarget(q2));
 
     const data1 = testTargetData(q1, 1, 1);
     await cache.addTargetData(data1);

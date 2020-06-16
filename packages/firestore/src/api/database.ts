@@ -32,10 +32,11 @@ import {
   Bound,
   Direction,
   FieldFilter,
-  Filter,
+  newQueryComparator,
   Operator,
   OrderBy,
-  Query as InternalQuery
+  Query as InternalQuery,
+  isInequalityFilter
 } from '../core/query';
 import { Transaction as InternalTransaction } from '../core/transaction';
 import { ChangeType, ViewSnapshot } from '../core/view_snapshot';
@@ -45,7 +46,7 @@ import { DocumentKey } from '../model/document_key';
 import { DeleteMutation, Mutation, Precondition } from '../model/mutation';
 import { FieldPath, ResourcePath } from '../model/path';
 import { isServerTimestamp } from '../model/server_timestamps';
-import { refValue } from '../model/values';
+import { isNanValue, isNullValue, refValue } from '../model/values';
 import { PlatformSupport } from '../platform/platform';
 import { debugAssert, fail } from '../util/assert';
 import { AsyncObserver } from '../util/async_observer';
@@ -1492,7 +1493,7 @@ export class BaseQuery {
         /** allowArrays = */ op === Operator.IN
       );
     }
-    const filter = FieldFilter.create(fieldPath, op, fieldValue);
+    const filter = new FieldFilter(fieldPath, op, fieldValue);
     this.validateNewFilter(filter);
     return filter;
   }
@@ -1741,57 +1742,62 @@ export class BaseQuery {
     }
   }
 
-  private validateNewFilter(filter: Filter): void {
-    if (filter instanceof FieldFilter) {
-      const arrayOps = [Operator.ARRAY_CONTAINS, Operator.ARRAY_CONTAINS_ANY];
-      const disjunctiveOps = [Operator.IN, Operator.ARRAY_CONTAINS_ANY];
-      const isArrayOp = arrayOps.indexOf(filter.op) >= 0;
-      const isDisjunctiveOp = disjunctiveOps.indexOf(filter.op) >= 0;
+  private validateNewFilter(filter: FieldFilter): void {
+    const arrayOps = [Operator.ARRAY_CONTAINS, Operator.ARRAY_CONTAINS_ANY];
+    const disjunctiveOps = [Operator.IN, Operator.ARRAY_CONTAINS_ANY];
+    const isArrayOp = arrayOps.indexOf(filter.op) >= 0;
+    const isDisjunctiveOp = disjunctiveOps.indexOf(filter.op) >= 0;
 
-      if (filter.isInequality()) {
-        const existingField = this._query.getInequalityFilterField();
-        if (existingField !== null && !existingField.isEqual(filter.field)) {
+    if (isNullValue(filter.value) && filter.op !== Operator.EQUAL) {
+      throw new FirestoreError(
+        Code.INVALID_ARGUMENT,
+        `Invalid query. Null supports only equality comparisons.`
+      );
+    } else if (isNanValue(filter.value) && filter.op !== Operator.EQUAL) {
+      throw new FirestoreError(
+        Code.INVALID_ARGUMENT,
+        `Invalid query. NaN supports only equality comparisons.`
+      );
+    } else if (isInequalityFilter(filter)) {
+      const existingField = this._query.getInequalityFilterField();
+      if (existingField !== null && !existingField.isEqual(filter.field)) {
+        throw new FirestoreError(
+          Code.INVALID_ARGUMENT,
+          'Invalid query. All where filters with an inequality' +
+            ' (<, <=, >, or >=) must be on the same field. But you have' +
+            ` inequality filters on '${existingField.toString()}'` +
+            ` and '${filter.field.toString()}'`
+        );
+      }
+
+      const firstOrderByField = this._query.getFirstOrderByField();
+      if (firstOrderByField !== null) {
+        this.validateOrderByAndInequalityMatch(filter.field, firstOrderByField);
+      }
+    } else if (isDisjunctiveOp || isArrayOp) {
+      // You can have at most 1 disjunctive filter and 1 array filter. Check if
+      // the new filter conflicts with an existing one.
+      let conflictingOp: Operator | null = null;
+      if (isDisjunctiveOp) {
+        conflictingOp = this._query.findFilterOperator(disjunctiveOps);
+      }
+      if (conflictingOp === null && isArrayOp) {
+        conflictingOp = this._query.findFilterOperator(arrayOps);
+      }
+      if (conflictingOp !== null) {
+        // We special case when it's a duplicate op to give a slightly clearer error message.
+        if (conflictingOp === filter.op) {
           throw new FirestoreError(
             Code.INVALID_ARGUMENT,
-            'Invalid query. All where filters with an inequality' +
-              ' (<, <=, >, or >=) must be on the same field. But you have' +
-              ` inequality filters on '${existingField.toString()}'` +
-              ` and '${filter.field.toString()}'`
+            'Invalid query. You cannot use more than one ' +
+              `'${filter.op.toString()}' filter.`
           );
-        }
-
-        const firstOrderByField = this._query.getFirstOrderByField();
-        if (firstOrderByField !== null) {
-          this.validateOrderByAndInequalityMatch(
-            filter.field,
-            firstOrderByField
+        } else {
+          throw new FirestoreError(
+            Code.INVALID_ARGUMENT,
+            `Invalid query. You cannot use '${filter.op.toString()}' filters ` +
+              `with '${conflictingOp.toString()}' filters.`
           );
-        }
-      } else if (isDisjunctiveOp || isArrayOp) {
-        // You can have at most 1 disjunctive filter and 1 array filter. Check if
-        // the new filter conflicts with an existing one.
-        let conflictingOp: Operator | null = null;
-        if (isDisjunctiveOp) {
-          conflictingOp = this._query.findFilterOperator(disjunctiveOps);
-        }
-        if (conflictingOp === null && isArrayOp) {
-          conflictingOp = this._query.findFilterOperator(arrayOps);
-        }
-        if (conflictingOp != null) {
-          // We special case when it's a duplicate op to give a slightly clearer error message.
-          if (conflictingOp === filter.op) {
-            throw new FirestoreError(
-              Code.INVALID_ARGUMENT,
-              'Invalid query. You cannot use more than one ' +
-                `'${filter.op.toString()}' filter.`
-            );
-          } else {
-            throw new FirestoreError(
-              Code.INVALID_ARGUMENT,
-              `Invalid query. You cannot use '${filter.op.toString()}' filters ` +
-                `with '${conflictingOp.toString()}' filters.`
-            );
-          }
         }
       }
     }
@@ -2505,7 +2511,7 @@ export function changesFromSnapshot<T>(
         'Invalid event type for first snapshot'
       );
       debugAssert(
-        !lastDoc || snapshot.query.docComparator(lastDoc, change.doc) < 0,
+        !lastDoc || newQueryComparator(snapshot.query)(lastDoc, change.doc) < 0,
         'Got added events in wrong order'
       );
       lastDoc = change.doc;

@@ -30,13 +30,13 @@ import { PersistencePromise } from './persistence_promise';
 import { ReferenceSet } from './reference_set';
 import { TargetCache } from './target_cache';
 import { TargetData } from './target_data';
-import { Target } from '../core/target';
+import { canonifyTarget, Target } from '../core/target';
 
 export class MemoryTargetCache implements TargetCache {
   /**
    * Maps a target to the data about that target
    */
-  private targets = new ObjectMap<Target, TargetData>(t => t.canonicalId());
+  private targets = new ObjectMap<Target, TargetData>(t => canonifyTarget(t));
 
   /** The last received snapshot version. */
   private lastRemoteSnapshotVersion = SnapshotVersion.min();

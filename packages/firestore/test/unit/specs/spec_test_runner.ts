@@ -25,7 +25,7 @@ import {
   Observer,
   QueryListener
 } from '../../../src/core/event_manager';
-import { Query } from '../../../src/core/query';
+import { canonifyQuery, Query } from '../../../src/core/query';
 import { SnapshotVersion } from '../../../src/core/snapshot_version';
 import { SyncEngine } from '../../../src/core/sync_engine';
 import { TargetId } from '../../../src/core/types';
@@ -156,7 +156,7 @@ abstract class TestRunner {
   private snapshotsInSyncEvents = 0;
 
   private queryListeners = new ObjectMap<Query, QueryListener>(q =>
-    q.canonicalId()
+    canonifyQuery(q)
   );
 
   private expectedActiveLimboDocs: DocumentKey[];
@@ -748,12 +748,12 @@ abstract class TestRunner {
         'Number of expected and actual events mismatch'
       );
       const actualEventsSorted = this.eventList.sort((a, b) =>
-        primitiveComparator(a.query.canonicalId(), b.query.canonicalId())
+        primitiveComparator(canonifyQuery(a.query), canonifyQuery(b.query))
       );
       const expectedEventsSorted = expectedEvents.sort((a, b) =>
         primitiveComparator(
-          parseQuery(a.query).canonicalId(),
-          parseQuery(b.query).canonicalId()
+          canonifyQuery(parseQuery(a.query)),
+          canonifyQuery(parseQuery(b.query))
         )
       );
       for (let i = 0; i < expectedEventsSorted.length; i++) {

@@ -22,7 +22,6 @@ import {
   Bound,
   Direction,
   FieldFilter,
-  Filter,
   LimitType,
   Operator,
   OrderBy,
@@ -806,7 +805,7 @@ export class JsonProtoSerializer {
       }
     }
 
-    let filterBy: Filter[] = [];
+    let filterBy: FieldFilter[] = [];
     if (query.where) {
       filterBy = this.fromFilter(query.where);
     }
@@ -888,7 +887,7 @@ export class JsonProtoSerializer {
     return result;
   }
 
-  private toFilter(filters: Filter[]): api.Filter | undefined {
+  private toFilter(filters: FieldFilter[]): api.Filter | undefined {
     if (filters.length === 0) {
       return;
     }
@@ -905,7 +904,7 @@ export class JsonProtoSerializer {
     return { compositeFilter: { op: 'AND', filters: protos } };
   }
 
-  private fromFilter(filter: api.Filter | undefined): Filter[] {
+  private fromFilter(filter: api.Filter | undefined): FieldFilter[] {
     if (!filter) {
       return [];
     } else if (filter.unaryFilter !== undefined) {
@@ -1015,8 +1014,8 @@ export class JsonProtoSerializer {
     );
   }
 
-  fromFieldFilter(filter: api.Filter): Filter {
-    return FieldFilter.create(
+  fromFieldFilter(filter: api.Filter): FieldFilter {
+    return new FieldFilter(
       this.fromFieldPathReference(filter.fieldFilter!.field!),
       this.fromOperatorName(filter.fieldFilter!.op!),
       filter.fieldFilter!.value!
@@ -1051,20 +1050,20 @@ export class JsonProtoSerializer {
     };
   }
 
-  fromUnaryFilter(filter: api.Filter): Filter {
+  fromUnaryFilter(filter: api.Filter): FieldFilter {
     switch (filter.unaryFilter!.op!) {
       case 'IS_NAN':
         const nanField = this.fromFieldPathReference(
           filter.unaryFilter!.field!
         );
-        return FieldFilter.create(nanField, Operator.EQUAL, {
+        return new FieldFilter(nanField, Operator.EQUAL, {
           doubleValue: NaN
         });
       case 'IS_NULL':
         const nullField = this.fromFieldPathReference(
           filter.unaryFilter!.field!
         );
-        return FieldFilter.create(nullField, Operator.EQUAL, {
+        return new FieldFilter(nullField, Operator.EQUAL, {
           nullValue: 'NULL_VALUE'
         });
       case 'OPERATOR_UNSPECIFIED':

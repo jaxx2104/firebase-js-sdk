@@ -51,7 +51,7 @@ import {
   maybeDocumentMap
 } from '../../src/model/collections';
 import {
-  compareDocumentsByField,
+  compareDocsByField,
   Document,
   DocumentOptions,
   MaybeDocument,
@@ -208,13 +208,7 @@ export function blob(...bytes: number[]): Blob {
 export function filter(path: string, op: string, value: unknown): FieldFilter {
   const dataValue = wrap(value);
   const operator = op as Operator;
-  const filter = FieldFilter.create(field(path), operator, dataValue);
-
-  if (filter instanceof FieldFilter) {
-    return filter;
-  } else {
-    return fail('Unrecognized filter: ' + JSON.stringify(filter));
-  }
+  return new FieldFilter(field(path), operator, dataValue);
 }
 
 export function setMutation(
@@ -641,7 +635,7 @@ export function documentSetAsArray(docs: DocumentSet): Document[] {
 export class DocComparator {
   static byField(...fields: string[]): DocumentComparator {
     const path = new FieldPath(fields);
-    return (doc1, doc2) => compareDocumentsByField(path, doc1, doc2);
+    return (doc1, doc2) => compareDocsByField(path, doc1, doc2);
   }
 }
 
@@ -778,7 +772,8 @@ export function expectSetToEqual<T>(set: SortedSet<T>, arr: T[]): void {
  */
 export function expectEqualitySets<T>(
   elems: T[][],
-  equalityFn: (v1: T, v2: T) => boolean
+  equalityFn: (v1: T, v2: T) => boolean,
+  stringifyFn?: (v: T) => string
 ): void {
   for (let i = 0; i < elems.length; i++) {
     const currentElems = elems[i];
@@ -792,9 +787,9 @@ export function expectEqualitySets<T>(
           expect(equalityFn(elem, otherElem)).to.equal(
             expectedComparison,
             'Expected (' +
-              elem +
+              (stringifyFn ? stringifyFn(elem) : elem) +
               ').isEqual(' +
-              otherElem +
+              (stringifyFn ? stringifyFn(otherElem) : otherElem) +
               ').to.equal(' +
               expectedComparison +
               ')'

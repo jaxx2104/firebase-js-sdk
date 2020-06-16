@@ -51,7 +51,7 @@ import {
 } from '../local/shared_client_state_syncer';
 import { SortedSet } from '../util/sorted_set';
 import { ListenSequence } from './listen_sequence';
-import { LimitType, Query } from './query';
+import { canonifyQuery, LimitType, Query, stringifyQuery } from './query';
 import { SnapshotVersion } from './snapshot_version';
 import { Target } from './target';
 import { TargetIdGenerator } from './target_id_generator';
@@ -149,7 +149,7 @@ export class SyncEngine implements RemoteSyncer {
   protected syncEngineListener: SyncEngineListener | null = null;
 
   protected queryViewsByQuery = new ObjectMap<Query, QueryView>(q =>
-    q.canonicalId()
+    canonifyQuery(q)
   );
   protected queriesByTarget = new Map<TargetId, Query[]>();
   /**
@@ -299,7 +299,10 @@ export class SyncEngine implements RemoteSyncer {
     this.assertSubscribed('unlisten()');
 
     const queryView = this.queryViewsByQuery.get(query)!;
-    debugAssert(!!queryView, 'Trying to unlisten on query not found:' + query);
+    debugAssert(
+      !!queryView,
+      'Trying to unlisten on query not found:' + stringifyQuery(query)
+    );
 
     // Only clean up the query view and target if this is the only query mapped
     // to the target.
@@ -903,7 +906,10 @@ export class SyncEngine implements RemoteSyncer {
       }
       for (const query of queries) {
         const queryView = this.queryViewsByQuery.get(query);
-        debugAssert(!!queryView, `No query view found for ${query}`);
+        debugAssert(
+          !!queryView,
+          `No query view found for ${stringifyQuery(query)}`
+        );
         keySet = keySet.unionWith(queryView.view.syncedDocuments);
       }
       return keySet;
@@ -912,7 +918,7 @@ export class SyncEngine implements RemoteSyncer {
 }
 
 /**
- * An impplementation of SyncEngine that implement SharedClientStateSyncer for
+ * An implementation of SyncEngine that implement SharedClientStateSyncer for
  * Multi-Tab synchronization.
  */
 // PORTING NOTE: Web only
@@ -1124,7 +1130,10 @@ export class MultiTabSyncEngine extends SyncEngine
 
         for (const query of queries) {
           const queryView = this.queryViewsByQuery.get(query);
-          debugAssert(!!queryView, `No query view found for ${query}`);
+          debugAssert(
+            !!queryView,
+            `No query view found for ${stringifyQuery(query)}`
+          );
 
           const viewChange = await this.synchronizeViewAndComputeSnapshot(
             queryView

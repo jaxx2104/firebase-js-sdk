@@ -19,7 +19,7 @@ import { Timestamp } from '../api/timestamp';
 import { User } from '../auth/user';
 import { Query } from '../core/query';
 import { SnapshotVersion } from '../core/snapshot_version';
-import { Target } from '../core/target';
+import { canonifyTarget, Target } from '../core/target';
 import { BatchId, TargetId } from '../core/types';
 import {
   DocumentKeySet,
@@ -180,7 +180,7 @@ export class LocalStore {
   /** Maps a target to its targetID. */
   // TODO(wuandy): Evaluate if TargetId can be part of Target.
   private targetIdByTarget = new ObjectMap<Target, TargetId>(t =>
-    t.canonicalId()
+    canonifyTarget(t)
   );
 
   /**

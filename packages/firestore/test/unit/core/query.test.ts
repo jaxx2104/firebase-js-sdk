@@ -19,7 +19,14 @@ import { expect } from 'chai';
 import { Blob } from '../../../src/api/blob';
 import { Timestamp } from '../../../src/api/timestamp';
 import { GeoPoint } from '../../../src/api/geo_point';
-import { Bound, Query } from '../../../src/core/query';
+import {
+  Bound,
+  canonifyQuery,
+  newQueryComparator,
+  Query,
+  queryMatches,
+  stringifyQuery
+} from '../../../src/core/query';
 import { DOCUMENT_KEY_NAME, ResourcePath } from '../../../src/model/path';
 import { addEqualityMatcher } from '../../util/equality_matcher';
 import {
@@ -33,6 +40,7 @@ import {
   ref,
   wrap
 } from '../../util/helpers';
+import { canonifyTarget } from '../../../src/core/target';
 
 describe('Bound', () => {
   function makeBound(values: unknown[], before: boolean): Bound {
@@ -74,9 +82,9 @@ describe('Query', () => {
     const doc3 = doc('rooms/other/messages/1', 0, { text: 'msg3' });
     // document query
     const query = Query.atPath(queryKey);
-    expect(query.matches(doc1)).to.equal(true);
-    expect(query.matches(doc2)).to.equal(false);
-    expect(query.matches(doc3)).to.equal(false);
+    expect(queryMatches(query, doc1)).to.equal(true);
+    expect(queryMatches(query, doc2)).to.equal(false);
+    expect(queryMatches(query, doc3)).to.equal(false);
   });
 
   it('matches correctly for shallow ancestor query', () => {
@@ -89,10 +97,10 @@ describe('Query', () => {
     const doc3 = doc('rooms/other/messages/1', 0, { text: 'msg3' });
     // shallow ancestor query
     const query = Query.atPath(queryPath);
-    expect(query.matches(doc1)).to.equal(true);
-    expect(query.matches(doc1meta)).to.equal(false);
-    expect(query.matches(doc2)).to.equal(true);
-    expect(query.matches(doc3)).to.equal(false);
+    expect(queryMatches(query, doc1)).to.equal(true);
+    expect(queryMatches(query, doc1meta)).to.equal(false);
+    expect(queryMatches(query, doc2)).to.equal(true);
+    expect(queryMatches(query, doc3)).to.equal(false);
   });
 
   it('matches primitive values for filters', () => {
@@ -108,17 +116,17 @@ describe('Query', () => {
     const doc4 = doc('collection/4', 0, { sort: false });
     const doc5 = doc('collection/5', 0, { sort: 'string' });
 
-    expect(query1.matches(doc1)).to.equal(false);
-    expect(query1.matches(doc2)).to.equal(true);
-    expect(query1.matches(doc3)).to.equal(true);
-    expect(query1.matches(doc4)).to.equal(false);
-    expect(query1.matches(doc5)).to.equal(false);
+    expect(queryMatches(query1, doc1)).to.equal(false);
+    expect(queryMatches(query1, doc2)).to.equal(true);
+    expect(queryMatches(query1, doc3)).to.equal(true);
+    expect(queryMatches(query1, doc4)).to.equal(false);
+    expect(queryMatches(query1, doc5)).to.equal(false);
 
-    expect(query2.matches(doc1)).to.equal(true);
-    expect(query2.matches(doc2)).to.equal(true);
-    expect(query2.matches(doc3)).to.equal(false);
-    expect(query2.matches(doc4)).to.equal(false);
-    expect(query2.matches(doc5)).to.equal(false);
+    expect(queryMatches(query2, doc1)).to.equal(true);
+    expect(queryMatches(query2, doc2)).to.equal(true);
+    expect(queryMatches(query2, doc3)).to.equal(false);
+    expect(queryMatches(query2, doc4)).to.equal(false);
+    expect(queryMatches(query2, doc5)).to.equal(false);
   });
 
   it('matches array-contains filters', () => {
@@ -128,11 +136,11 @@ describe('Query', () => {
 
     // not an array
     let document = doc('collection/1', 0, { array: 1 });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // empty array.
     document = doc('collection/1', 0, { array: [] });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // array without element (and make sure it doesn't match in a nested field
     // or a different field).
@@ -140,11 +148,11 @@ describe('Query', () => {
       array: [41, '42', { a: 42, b: [42] }],
       different: [42]
     });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // array with element.
     document = doc('collection/1', 0, { array: [1, '2', 42, { a: 1 }] });
-    expect(query.matches(document)).to.be.true;
+    expect(queryMatches(query, document)).to.be.true;
   });
 
   it('matches array-contains filters with object values', () => {
@@ -157,13 +165,13 @@ describe('Query', () => {
     let document = doc('collection/1', 0, {
       array: [{ a: 42 }, { a: [42, 43] }, { b: [42] }, { a: [42], b: 42 }]
     });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // array with element.
     document = doc('collection/1', 0, {
       array: [1, '2', 42, { a: [42] }]
     });
-    expect(query.matches(document)).to.be.true;
+    expect(queryMatches(query, document)).to.be.true;
   });
 
   it('matches IN filters', () => {
@@ -172,21 +180,21 @@ describe('Query', () => {
     );
 
     let document = doc('collection/1', 0, { zip: 12345 });
-    expect(query.matches(document)).to.be.true;
+    expect(queryMatches(query, document)).to.be.true;
 
     // Value matches in array.
     document = doc('collection/1', 0, { zip: [12345] });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // Non-type match.
     document = doc('collection/1', 0, { zip: '123435' });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // Nested match.
     document = doc('collection/1', 0, {
       zip: [123, '12345', { zip: 12345, b: [42] }]
     });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
   });
 
   it('matches IN filters with object values', () => {
@@ -198,13 +206,13 @@ describe('Query', () => {
     let document = doc('collection/1', 0, {
       zip: [{ a: 42 }]
     });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // Containing object.
     document = doc('collection/1', 0, {
       zip: { a: [42] }
     });
-    expect(query.matches(document)).to.be.true;
+    expect(queryMatches(query, document)).to.be.true;
   });
 
   it('matches array-contains-any filters', () => {
@@ -213,21 +221,21 @@ describe('Query', () => {
     );
 
     let document = doc('collection/1', 0, { zip: [12345] });
-    expect(query.matches(document)).to.be.true;
+    expect(queryMatches(query, document)).to.be.true;
 
     // Value matches in non-array.
     document = doc('collection/1', 0, { zip: 12345 });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // Non-type match.
     document = doc('collection/1', 0, { zip: ['12345'] });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
 
     // Nested match.
     document = doc('collection/1', 0, {
       zip: [123, '12345', { zip: [12345], b: [42] }]
     });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
   });
 
   it('matches array-contains-any filters with object values', () => {
@@ -239,13 +247,13 @@ describe('Query', () => {
     let document = doc('collection/1', 0, {
       zip: [{ a: [42] }]
     });
-    expect(query.matches(document)).to.be.true;
+    expect(queryMatches(query, document)).to.be.true;
 
     // Containing object.
     document = doc('collection/1', 0, {
       zip: { a: [42] }
     });
-    expect(query.matches(document)).to.be.false;
+    expect(queryMatches(query, document)).to.be.false;
   });
 
   it('matches NaN for filters', () => {
@@ -258,11 +266,11 @@ describe('Query', () => {
     const doc4 = doc('collection/4', 0, { sort: false });
     const doc5 = doc('collection/5', 0, { sort: 'string' });
 
-    expect(query.matches(doc1)).to.equal(true);
-    expect(query.matches(doc2)).to.equal(false);
-    expect(query.matches(doc3)).to.equal(false);
-    expect(query.matches(doc4)).to.equal(false);
-    expect(query.matches(doc5)).to.equal(false);
+    expect(queryMatches(query, doc1)).to.equal(true);
+    expect(queryMatches(query, doc2)).to.equal(false);
+    expect(queryMatches(query, doc3)).to.equal(false);
+    expect(queryMatches(query, doc4)).to.equal(false);
+    expect(queryMatches(query, doc5)).to.equal(false);
   });
 
   it('matches null for filters', () => {
@@ -275,11 +283,11 @@ describe('Query', () => {
     const doc4 = doc('collection/4', 0, { sort: false });
     const doc5 = doc('collection/5', 0, { sort: 'string' });
 
-    expect(query.matches(doc1)).to.equal(true);
-    expect(query.matches(doc2)).to.equal(false);
-    expect(query.matches(doc3)).to.equal(false);
-    expect(query.matches(doc4)).to.equal(false);
-    expect(query.matches(doc5)).to.equal(false);
+    expect(queryMatches(query, doc1)).to.equal(true);
+    expect(queryMatches(query, doc2)).to.equal(false);
+    expect(queryMatches(query, doc3)).to.equal(false);
+    expect(queryMatches(query, doc4)).to.equal(false);
+    expect(queryMatches(query, doc5)).to.equal(false);
   });
 
   it('matches complex objects for filters', () => {
@@ -298,21 +306,21 @@ describe('Query', () => {
     const doc6 = doc('collection/6', 0, {}); // no sort field
     const doc7 = doc('collection/7', 0, { sort: [3, 1] });
 
-    expect(query1.matches(doc1)).to.equal(true);
-    expect(query1.matches(doc2)).to.equal(false);
-    expect(query1.matches(doc3)).to.equal(false);
-    expect(query1.matches(doc4)).to.equal(false);
-    expect(query1.matches(doc5)).to.equal(false);
-    expect(query1.matches(doc6)).to.equal(false);
-    expect(query1.matches(doc7)).to.equal(false);
+    expect(queryMatches(query1, doc1)).to.equal(true);
+    expect(queryMatches(query1, doc2)).to.equal(false);
+    expect(queryMatches(query1, doc3)).to.equal(false);
+    expect(queryMatches(query1, doc4)).to.equal(false);
+    expect(queryMatches(query1, doc5)).to.equal(false);
+    expect(queryMatches(query1, doc6)).to.equal(false);
+    expect(queryMatches(query1, doc7)).to.equal(false);
 
-    expect(query2.matches(doc1)).to.equal(true);
-    expect(query2.matches(doc2)).to.equal(false);
-    expect(query2.matches(doc3)).to.equal(false);
-    expect(query2.matches(doc4)).to.equal(false);
-    expect(query2.matches(doc5)).to.equal(false);
-    expect(query2.matches(doc6)).to.equal(false);
-    expect(query2.matches(doc7)).to.equal(false);
+    expect(queryMatches(query2, doc1)).to.equal(true);
+    expect(queryMatches(query2, doc2)).to.equal(false);
+    expect(queryMatches(query2, doc3)).to.equal(false);
+    expect(queryMatches(query2, doc4)).to.equal(false);
+    expect(queryMatches(query2, doc5)).to.equal(false);
+    expect(queryMatches(query2, doc6)).to.equal(false);
+    expect(queryMatches(query2, doc7)).to.equal(false);
   });
 
   it("doesn't crash querying unset fields", () => {
@@ -323,8 +331,8 @@ describe('Query', () => {
     const doc1 = doc('collection/1', 0, { sort: 2 });
     const doc2 = doc('collection/1', 0, {});
 
-    expect(query.matches(doc1)).to.equal(true);
-    expect(query.matches(doc2)).to.equal(false);
+    expect(queryMatches(query, doc1)).to.equal(true);
+    expect(queryMatches(query, doc2)).to.equal(false);
   });
 
   it("doesn't remove complex objects with orderBy", () => {
@@ -336,11 +344,11 @@ describe('Query', () => {
     const doc4 = doc('collection/4', 0, { sort: { foo: 2 } });
     const doc5 = doc('collection/5', 0, { sort: { foo: 'bar' } });
 
-    expect(query.matches(doc1)).to.equal(true);
-    expect(query.matches(doc2)).to.equal(true);
-    expect(query.matches(doc3)).to.equal(true);
-    expect(query.matches(doc4)).to.equal(true);
-    expect(query.matches(doc5)).to.equal(true);
+    expect(queryMatches(query, doc1)).to.equal(true);
+    expect(queryMatches(query, doc2)).to.equal(true);
+    expect(queryMatches(query, doc3)).to.equal(true);
+    expect(queryMatches(query, doc4)).to.equal(true);
+    expect(queryMatches(query, doc5)).to.equal(true);
   });
 
   it('filters based on array value', () => {
@@ -353,10 +361,10 @@ describe('Query', () => {
       filter('tags', '==', ['foo', true, 1])
     ];
     for (const filter of matchingFilters) {
-      expect(baseQuery.addFilter(filter).matches(doc1)).to.equal(true);
+      expect(queryMatches(baseQuery.addFilter(filter), doc1)).to.equal(true);
     }
     for (const filter of nonMatchingFilters) {
-      expect(baseQuery.addFilter(filter).matches(doc1)).to.equal(false);
+      expect(queryMatches(baseQuery.addFilter(filter), doc1)).to.equal(false);
     }
   });
 
@@ -375,10 +383,10 @@ describe('Query', () => {
       filter('tags', '==', { foo: 'foo', a: 0, b: true })
     ];
     for (const filter of matchingFilters) {
-      expect(baseQuery.addFilter(filter).matches(doc1)).to.equal(true);
+      expect(queryMatches(baseQuery.addFilter(filter), doc1)).to.equal(true);
     }
     for (const filter of nonMatchingFilters) {
-      expect(baseQuery.addFilter(filter).matches(doc1)).to.equal(false);
+      expect(queryMatches(baseQuery.addFilter(filter), doc1)).to.equal(false);
     }
   });
 
@@ -402,7 +410,7 @@ describe('Query', () => {
       doc('collection/1', 0, { sort: ref('collection/id1') })
     ];
 
-    expectCorrectComparisons(docs, query.docComparator.bind(query));
+    expectCorrectComparisons(docs, newQueryComparator(query));
   });
 
   it('sorts documents using multiple fields', () => {
@@ -423,7 +431,7 @@ describe('Query', () => {
       doc('collection/1', 0, { sort1: 2, sort2: 3 })
     ];
 
-    expectCorrectComparisons(docs, query.docComparator.bind(query));
+    expectCorrectComparisons(docs, newQueryComparator(query));
   });
 
   it('sorts documents with descending too', () => {
@@ -444,7 +452,7 @@ describe('Query', () => {
       doc('collection/1', 0, { sort1: 1, sort2: 1 })
     ];
 
-    expectCorrectComparisons(docs, query.docComparator.bind(query));
+    expectCorrectComparisons(docs, newQueryComparator(query));
   });
 
   it('generates canonical ids', () => {
@@ -541,9 +549,13 @@ describe('Query', () => {
       [q18a, q18b]
     ];
 
-    expectEqualitySets(queries, (q1, q2) => {
-      return q1.canonicalId() === q2.canonicalId();
-    });
+    expectEqualitySets(
+      queries,
+      (q1, q2) => {
+        return canonifyQuery(q1) === canonifyQuery(q2);
+      },
+      stringifyQuery
+    );
   });
 
   it('canonical ids are stable', () => {
@@ -722,6 +734,6 @@ describe('Query', () => {
   });
 
   function assertCanonicalId(query: Query, expectedCanonicalId: string): void {
-    expect(query.toTarget().canonicalId()).to.equal(expectedCanonicalId);
+    expect(canonifyTarget(query.toTarget())).to.equal(expectedCanonicalId);
   }
 });
