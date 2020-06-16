@@ -16,6 +16,13 @@
  */
 
 import { use } from 'chai';
+import {
+  FieldFilter,
+  filterEquals,
+  Query,
+  queryEquals
+} from '../../src/core/query';
+import { Target, targetEquals } from '../../src/core/target';
 
 /**
  * Duck-typed interface for objects that have an isEqual() method.
@@ -34,6 +41,15 @@ export interface Equatable<T> {
  */
 
 function customDeepEqual(left: unknown, right: unknown): boolean {
+  if (left instanceof Query && right instanceof Query) {
+    return queryEquals(left, right);
+  }
+  if (left instanceof Target && right instanceof Target) {
+    return targetEquals(left, right);
+  }
+  if (left instanceof FieldFilter && right instanceof FieldFilter) {
+    return filterEquals(left, right);
+  }
   if (typeof left === 'object' && left && 'isEqual' in left) {
     return (left as Equatable<unknown>).isEqual(right);
   }

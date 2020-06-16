@@ -28,7 +28,7 @@ import {
   Query
 } from '../core/query';
 import { SnapshotVersion } from '../core/snapshot_version';
-import { Target } from '../core/target';
+import { isDocumentTarget, Target } from '../core/target';
 import { TargetId } from '../core/types';
 import { TargetData, TargetPurpose } from '../local/target_data';
 import { Document, MaybeDocument, NoDocument } from '../model/document';
@@ -872,7 +872,7 @@ export class JsonProtoSerializer {
     let result: api.Target;
     const target = targetData.target;
 
-    if (target.isDocumentQuery()) {
+    if (isDocumentTarget(target)) {
       result = { documents: this.toDocumentsTarget(target) };
     } else {
       result = { query: this.toQueryTarget(target) };
@@ -1056,9 +1056,7 @@ export class JsonProtoSerializer {
         const nanField = this.fromFieldPathReference(
           filter.unaryFilter!.field!
         );
-        return new FieldFilter(nanField, Operator.EQUAL, {
-          doubleValue: NaN
-        });
+        return new FieldFilter(nanField, Operator.EQUAL, this.toNumber(NaN));
       case 'IS_NULL':
         const nullField = this.fromFieldPathReference(
           filter.unaryFilter!.field!

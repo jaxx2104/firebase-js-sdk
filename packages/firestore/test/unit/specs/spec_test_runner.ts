@@ -25,7 +25,7 @@ import {
   Observer,
   QueryListener
 } from '../../../src/core/event_manager';
-import { canonifyQuery, Query } from '../../../src/core/query';
+import { canonifyQuery, Query, queryEquals } from '../../../src/core/query';
 import { SnapshotVersion } from '../../../src/core/snapshot_version';
 import { SyncEngine } from '../../../src/core/sync_engine';
 import { TargetId } from '../../../src/core/types';
@@ -155,8 +155,9 @@ abstract class TestRunner {
   private snapshotsInSyncListeners: Array<Observer<void>>;
   private snapshotsInSyncEvents = 0;
 
-  private queryListeners = new ObjectMap<Query, QueryListener>(q =>
-    canonifyQuery(q)
+  private queryListeners = new ObjectMap<Query, QueryListener>(
+    q => canonifyQuery(q),
+    queryEquals
   );
 
   private expectedActiveLimboDocs: DocumentKey[];

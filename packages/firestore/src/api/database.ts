@@ -32,11 +32,12 @@ import {
   Bound,
   Direction,
   FieldFilter,
+  isInequalityFilter,
   newQueryComparator,
   Operator,
   OrderBy,
   Query as InternalQuery,
-  isInequalityFilter
+  queryEquals
 } from '../core/query';
 import { Transaction as InternalTransaction } from '../core/transaction';
 import { ChangeType, ViewSnapshot } from '../core/view_snapshot';
@@ -2001,7 +2002,7 @@ export class Query<T = firestore.DocumentData> extends BaseQuery
     }
     return (
       this.firestore === other.firestore &&
-      this._query.isEqual(other._query) &&
+      queryEquals(this._query, other._query) &&
       this._converter === other._converter
     );
   }
@@ -2301,7 +2302,7 @@ export class QuerySnapshot<T = firestore.DocumentData>
 
     return (
       this._firestore === other._firestore &&
-      this._originalQuery.isEqual(other._originalQuery) &&
+      queryEquals(this._originalQuery, other._originalQuery) &&
       this._snapshot.isEqual(other._snapshot) &&
       this._converter === other._converter
     );

@@ -18,7 +18,7 @@
 import { debugAssert } from '../util/assert';
 import { EventHandler } from '../util/misc';
 import { ObjectMap } from '../util/obj_map';
-import { canonifyQuery, Query, stringifyQuery } from './query';
+import { canonifyQuery, Query, queryEquals, stringifyQuery } from './query';
 import { SyncEngine, SyncEngineListener } from './sync_engine';
 import { OnlineState } from './types';
 import { ChangeType, DocumentViewChange, ViewSnapshot } from './view_snapshot';
@@ -47,8 +47,9 @@ export interface Observer<T> {
  * backend.
  */
 export class EventManager implements SyncEngineListener {
-  private queries = new ObjectMap<Query, QueryListenersInfo>(q =>
-    canonifyQuery(q)
+  private queries = new ObjectMap<Query, QueryListenersInfo>(
+    q => canonifyQuery(q),
+    queryEquals
   );
 
   private onlineState = OnlineState.Unknown;

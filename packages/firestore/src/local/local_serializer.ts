@@ -29,7 +29,7 @@ import * as api from '../protos/firestore_proto_api';
 import { JsonProtoSerializer } from '../remote/serializer';
 import { debugAssert, fail } from '../util/assert';
 import { ByteString } from '../util/byte_string';
-import { canonifyTarget, Target } from '../core/target';
+import { canonifyTarget, isDocumentTarget, Target } from '../core/target';
 import {
   DbMutationBatch,
   DbNoDocument,
@@ -210,7 +210,7 @@ export class LocalSerializer {
       targetData.lastLimboFreeSnapshotVersion
     );
     let queryProto: DbQuery;
-    if (targetData.target.isDocumentQuery()) {
+    if (isDocumentTarget(targetData.target)) {
       queryProto = this.remoteSerializer.toDocumentsTarget(targetData.target);
     } else {
       queryProto = this.remoteSerializer.toQueryTarget(targetData.target);

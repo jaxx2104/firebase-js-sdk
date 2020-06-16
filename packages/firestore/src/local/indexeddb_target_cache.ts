@@ -46,7 +46,7 @@ import { PersistencePromise } from './persistence_promise';
 import { TargetCache } from './target_cache';
 import { TargetData } from './target_data';
 import { SimpleDbStore } from './simple_db';
-import { canonifyTarget, Target } from '../core/target';
+import { canonifyTarget, Target, targetEquals } from '../core/target';
 
 export class IndexedDbTargetCache implements TargetCache {
   constructor(
@@ -265,7 +265,7 @@ export class IndexedDbTargetCache implements TargetCache {
           const found = this.serializer.fromDbTarget(value);
           // After finding a potential match, check that the target is
           // actually equal to the requested target.
-          if (target.isEqual(found.target)) {
+          if (targetEquals(target, found.target)) {
             result = found;
             control.done();
           }

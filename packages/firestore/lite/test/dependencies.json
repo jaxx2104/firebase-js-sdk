@@ -13,13 +13,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -122,7 +122,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 79675
+        "sizeInBytes": 78326
     },
     "CollectionReference": {
         "dependencies": {
@@ -144,7 +144,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -154,6 +153,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -284,7 +284,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 110524
+        "sizeInBytes": 109176
     },
     "DocumentReference": {
         "dependencies": {
@@ -298,13 +298,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -407,7 +407,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78465
+        "sizeInBytes": 77116
     },
     "DocumentSnapshot": {
         "dependencies": {
@@ -427,7 +427,6 @@
                 "fail",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -437,6 +436,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -546,7 +546,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 86565
+        "sizeInBytes": 85216
     },
     "FieldPath": {
         "dependencies": {
@@ -561,13 +561,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -669,7 +669,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78558
+        "sizeInBytes": 77209
     },
     "FieldValue": {
         "dependencies": {
@@ -683,13 +683,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -792,7 +792,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78057
+        "sizeInBytes": 76708
     },
     "FirebaseFirestore": {
         "dependencies": {
@@ -806,13 +806,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -913,7 +913,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 77964
+        "sizeInBytes": 76615
     },
     "GeoPoint": {
         "dependencies": {
@@ -927,13 +927,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -1036,7 +1036,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 79057
+        "sizeInBytes": 77708
     },
     "Query": {
         "dependencies": {
@@ -1058,7 +1058,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -1068,6 +1067,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -1197,7 +1197,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 110128
+        "sizeInBytes": 108780
     },
     "QueryDocumentSnapshot": {
         "dependencies": {
@@ -1217,7 +1217,6 @@
                 "fail",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -1227,6 +1226,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -1336,7 +1336,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 86570
+        "sizeInBytes": 85221
     },
     "QuerySnapshot": {
         "dependencies": {
@@ -1350,13 +1350,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -1458,7 +1458,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78198
+        "sizeInBytes": 76849
     },
     "Timestamp": {
         "dependencies": {
@@ -1472,13 +1472,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -1579,7 +1579,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 77943
+        "sizeInBytes": 76594
     },
     "Transaction": {
         "dependencies": {
@@ -1602,7 +1602,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -1612,6 +1611,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -1739,7 +1739,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 100993
+        "sizeInBytes": 99644
     },
     "WriteBatch": {
         "dependencies": {
@@ -1762,7 +1762,6 @@
                 "fieldMaskContains",
                 "fieldPathFromArgument",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -1772,6 +1771,7 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -1896,7 +1896,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 97470
+        "sizeInBytes": 96121
     },
     "addDoc": {
         "dependencies": {
@@ -1922,7 +1922,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -1933,6 +1932,7 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -2065,7 +2065,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 113009
+        "sizeInBytes": 111661
     },
     "arrayRemove": {
         "dependencies": {
@@ -2082,7 +2082,6 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "geoPointEquals",
@@ -2090,6 +2089,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -2209,7 +2209,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 88268
+        "sizeInBytes": 86919
     },
     "arrayUnion": {
         "dependencies": {
@@ -2226,7 +2226,6 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "geoPointEquals",
@@ -2234,6 +2233,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -2353,7 +2353,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 88261
+        "sizeInBytes": 86912
     },
     "collection": {
         "dependencies": {
@@ -2376,7 +2376,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -2386,6 +2385,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -2517,7 +2517,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 111152
+        "sizeInBytes": 109804
     },
     "collectionGroup": {
         "dependencies": {
@@ -2540,7 +2540,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -2550,6 +2549,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -2679,7 +2679,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 110583
+        "sizeInBytes": 109235
     },
     "deleteDoc": {
         "dependencies": {
@@ -2696,7 +2696,6 @@
                 "debugCast",
                 "deleteDoc",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
@@ -2704,6 +2703,7 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -2806,7 +2806,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 79518
+        "sizeInBytes": 78169
     },
     "deleteField": {
         "dependencies": {
@@ -2821,13 +2821,13 @@
                 "debugAssert",
                 "deleteField",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -2932,7 +2932,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 79131
+        "sizeInBytes": 77782
     },
     "doc": {
         "dependencies": {
@@ -2955,7 +2955,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -2965,6 +2964,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -3097,7 +3097,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 111840
+        "sizeInBytes": 110492
     },
     "documentId": {
         "dependencies": {
@@ -3113,13 +3113,13 @@
                 "debugAssert",
                 "documentId",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -3221,7 +3221,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78608
+        "sizeInBytes": 77259
     },
     "getDoc": {
         "dependencies": {
@@ -3242,7 +3242,6 @@
                 "fail",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -3254,6 +3253,7 @@
                 "invalidClassError",
                 "invokeBatchGetDocumentsRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -3363,7 +3363,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 87756
+        "sizeInBytes": 86407
     },
     "getFirestore": {
         "dependencies": {
@@ -3377,7 +3377,6 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getFirestore",
@@ -3385,6 +3384,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -3485,7 +3485,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78043
+        "sizeInBytes": 76694
     },
     "getQuery": {
         "dependencies": {
@@ -3508,7 +3508,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -3520,6 +3519,7 @@
                 "invalidClassError",
                 "invokeRunQueryRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -3650,7 +3650,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 111462
+        "sizeInBytes": 110114
     },
     "increment": {
         "dependencies": {
@@ -3666,7 +3666,6 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "geoPointEquals",
@@ -3675,6 +3674,7 @@
                 "increment",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -3793,7 +3793,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 87868
+        "sizeInBytes": 86519
     },
     "initializeFirestore": {
         "dependencies": {
@@ -3807,7 +3807,6 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
@@ -3815,6 +3814,7 @@
                 "initializeFirestore",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -3915,7 +3915,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78129
+        "sizeInBytes": 76780
     },
     "parent": {
         "dependencies": {
@@ -3937,7 +3937,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -3947,6 +3946,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -4078,7 +4078,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 110867
+        "sizeInBytes": 109519
     },
     "queryEqual": {
         "dependencies": {
@@ -4090,6 +4090,7 @@
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
+                "boundEquals",
                 "cast",
                 "coercedFieldValuesArray",
                 "createMetadata",
@@ -4110,6 +4111,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -4149,9 +4151,11 @@
                 "parseSentinelFieldValue",
                 "primitiveComparator",
                 "queryEqual",
+                "queryEquals",
                 "refValue",
                 "registerFirestore",
                 "serverTimestamp",
+                "targetEquals",
                 "timestampEquals",
                 "tryGetCustomObjectType",
                 "typeOrder",
@@ -4240,7 +4244,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 110332
+        "sizeInBytes": 110210
     },
     "refEqual": {
         "dependencies": {
@@ -4262,7 +4266,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -4272,6 +4275,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -4403,7 +4407,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 110809
+        "sizeInBytes": 109461
     },
     "runTransaction": {
         "dependencies": {
@@ -4427,7 +4431,6 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -4440,6 +4443,7 @@
                 "invokeBatchGetDocumentsRpc",
                 "invokeCommitRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isIndexedDbTransactionError",
@@ -4575,7 +4579,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 113689
+        "sizeInBytes": 112340
     },
     "serverTimestamp": {
         "dependencies": {
@@ -4589,13 +4593,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -4701,7 +4705,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78830
+        "sizeInBytes": 77481
     },
     "setDoc": {
         "dependencies": {
@@ -4724,7 +4728,6 @@
                 "fieldMaskContains",
                 "fieldPathFromArgument",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -4734,6 +4737,7 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -4856,7 +4860,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 95769
+        "sizeInBytes": 94420
     },
     "setLogLevel": {
         "dependencies": {
@@ -4870,13 +4874,13 @@
                 "createMetadata",
                 "debugAssert",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -4978,7 +4982,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78008
+        "sizeInBytes": 76659
     },
     "snapshotEqual": {
         "dependencies": {
@@ -4990,6 +4994,7 @@
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
+                "boundEquals",
                 "cast",
                 "coercedFieldValuesArray",
                 "createMetadata",
@@ -5010,6 +5015,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -5049,10 +5055,12 @@
                 "parseSentinelFieldValue",
                 "primitiveComparator",
                 "queryEqual",
+                "queryEquals",
                 "refValue",
                 "registerFirestore",
                 "serverTimestamp",
                 "snapshotEqual",
+                "targetEquals",
                 "timestampEquals",
                 "tryGetCustomObjectType",
                 "typeOrder",
@@ -5142,7 +5150,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 111065
+        "sizeInBytes": 110943
     },
     "terminate": {
         "dependencies": {
@@ -5158,13 +5166,13 @@
                 "debugAssert",
                 "debugCast",
                 "fail",
-                "filterEquals",
                 "formatPlural",
                 "geoPointEquals",
                 "getLocalWriteTime",
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isInequalityFilter",
                 "isInteger",
@@ -5267,7 +5275,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 78801
+        "sizeInBytes": 77452
     },
     "updateDoc": {
         "dependencies": {
@@ -5289,7 +5297,6 @@
                 "fieldMaskContains",
                 "fieldPathFromArgument",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -5299,6 +5306,7 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -5422,7 +5430,7 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 95860
+        "sizeInBytes": 94511
     },
     "writeBatch": {
         "dependencies": {
@@ -5445,7 +5453,6 @@
                 "fieldMaskContains",
                 "fieldPathFromArgument",
                 "fieldPathFromDotSeparatedString",
-                "filterEquals",
                 "forEach",
                 "formatPlural",
                 "fromDotSeparatedString",
@@ -5455,6 +5462,7 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
+                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
@@ -5580,6 +5588,6 @@
             ],
             "variables": []
         },
-        "sizeInBytes": 97550
+        "sizeInBytes": 96201
     }
 }

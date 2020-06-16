@@ -51,7 +51,13 @@ import {
 } from '../local/shared_client_state_syncer';
 import { SortedSet } from '../util/sorted_set';
 import { ListenSequence } from './listen_sequence';
-import { canonifyQuery, LimitType, Query, stringifyQuery } from './query';
+import {
+  canonifyQuery,
+  LimitType,
+  Query,
+  queryEquals,
+  stringifyQuery
+} from './query';
 import { SnapshotVersion } from './snapshot_version';
 import { Target } from './target';
 import { TargetIdGenerator } from './target_id_generator';
@@ -148,8 +154,9 @@ export interface SyncEngineListener {
 export class SyncEngine implements RemoteSyncer {
   protected syncEngineListener: SyncEngineListener | null = null;
 
-  protected queryViewsByQuery = new ObjectMap<Query, QueryView>(q =>
-    canonifyQuery(q)
+  protected queryViewsByQuery = new ObjectMap<Query, QueryView>(
+    q => canonifyQuery(q),
+    queryEquals
   );
   protected queriesByTarget = new Map<TargetId, Query[]>();
   /**
@@ -310,7 +317,7 @@ export class SyncEngine implements RemoteSyncer {
     if (queries.length > 1) {
       this.queriesByTarget.set(
         queryView.targetId,
-        queries.filter(q => !q.isEqual(query))
+        queries.filter(q => !queryEquals(q, query))
       );
       this.queryViewsByQuery.delete(query);
       return;

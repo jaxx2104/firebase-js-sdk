@@ -29,15 +29,16 @@ import {
   Bound,
   Direction,
   Operator,
-  Query as InternalQuery
+  Query as InternalQuery,
+  queryEquals
 } from '../../../src/core/query';
 import { ResourcePath } from '../../../src/model/path';
 import { AutoId } from '../../../src/util/misc';
 import {
   DocumentSnapshot,
+  fieldPathFromArgument,
   QueryDocumentSnapshot,
-  QuerySnapshot,
-  fieldPathFromArgument
+  QuerySnapshot
 } from './snapshot';
 import {
   invokeBatchGetDocumentsRpc,
@@ -583,7 +584,7 @@ export function queryEqual<T>(
   if (left instanceof Query && right instanceof Query) {
     return (
       left.firestore === right.firestore &&
-      left._query.isEqual(right._query) &&
+      queryEquals(left._query, right._query) &&
       left._converter === right._converter
     );
   }

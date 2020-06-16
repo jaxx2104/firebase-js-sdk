@@ -31,7 +31,14 @@ import {
 import { FieldPath, ResourcePath } from '../model/path';
 import { debugAssert, fail } from '../util/assert';
 import { isNullOrUndefined } from '../util/types';
-import { canonifyTarget, newTarget, stringifyTarget, Target } from './target';
+import {
+  canonifyTarget,
+  newTarget,
+  stringifyTarget,
+  Target,
+  targetEquals,
+  isDocumentTarget
+} from './target';
 
 export const enum LimitType {
   First = 'F',
@@ -254,13 +261,6 @@ export class Query {
     );
   }
 
-  isEqual(other: Query): boolean {
-    return (
-      this.toTarget().isEqual(other.toTarget()) &&
-      this.limitType === other.limitType
-    );
-  }
-
   hasLimitToFirst(): boolean {
     return !isNullOrUndefined(this.limit) && this.limitType === LimitType.First;
   }
@@ -296,7 +296,7 @@ export class Query {
   }
 
   isDocumentQuery(): boolean {
-    return this.toTarget().isDocumentQuery();
+    return isDocumentTarget(this.toTarget());
   }
 
   isCollectionGroupQuery(): boolean {
@@ -359,6 +359,13 @@ export class Query {
       'Bound is longer than orderBy'
     );
   }
+}
+
+export function queryEquals(left: Query, right: Query): boolean {
+  return (
+    targetEquals(left.toTarget(), right.toTarget()) &&
+    left.limitType === right.limitType
+  );
 }
 
 // TODO(b/29183165): This is used to get a unique string from a query to, for
@@ -629,26 +636,6 @@ export const enum Direction {
  */
 export class Bound {
   constructor(readonly position: api.Value[], readonly before: boolean) {}
-
-  isEqual(other: Bound | null): boolean {
-    if (other === null) {
-      return false;
-    }
-    if (
-      this.before !== other.before ||
-      this.position.length !== other.position.length
-    ) {
-      return false;
-    }
-    for (let i = 0; i < this.position.length; i++) {
-      const thisPosition = this.position[i];
-      const otherPosition = other.position[i];
-      if (!valueEquals(thisPosition, otherPosition)) {
-        return false;
-      }
-    }
-    return true;
-  }
 }
 
 export function canonifyBound(bound: Bound): string {
@@ -656,6 +643,29 @@ export function canonifyBound(bound: Bound): string {
   return `${bound.before ? 'b' : 'a'}:${bound.position
     .map(p => canonicalId(p))
     .join(',')}`;
+}
+
+export function boundEquals(left: Bound | null, right: Bound | null): boolean {
+  if (left === null) {
+    return right === null;
+  } else if (right === null) {
+    return false;
+  }
+
+  if (
+    left.before !== right.before ||
+    left.position.length !== right.position.length
+  ) {
+    return false;
+  }
+  for (let i = 0; i < left.position.length; i++) {
+    const thisPosition = left.position[i];
+    const otherPosition = right.position[i];
+    if (!valueEquals(thisPosition, otherPosition)) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**

@@ -20,6 +20,7 @@ import { ResourcePath } from '../model/path';
 import { isNullOrUndefined } from '../util/types';
 import {
   Bound,
+  boundEquals,
   canonifyBound,
   canonifyFieldFilter,
   canonifyOrderBy,
@@ -48,60 +49,6 @@ export class Target {
     readonly startAt: Bound | null,
     readonly endAt: Bound | null
   ) {}
-
-  isEqual(other: Target): boolean {
-    if (this.limit !== other.limit) {
-      return false;
-    }
-
-    if (this.orderBy.length !== other.orderBy.length) {
-      return false;
-    }
-
-    for (let i = 0; i < this.orderBy.length; i++) {
-      if (!this.orderBy[i].isEqual(other.orderBy[i])) {
-        return false;
-      }
-    }
-
-    if (this.filters.length !== other.filters.length) {
-      return false;
-    }
-
-    for (let i = 0; i < this.filters.length; i++) {
-      if (!filterEquals(this.filters[i], other.filters[i])) {
-        return false;
-      }
-    }
-
-    if (this.collectionGroup !== other.collectionGroup) {
-      return false;
-    }
-
-    if (!this.path.isEqual(other.path)) {
-      return false;
-    }
-
-    if (
-      this.startAt !== null
-        ? !this.startAt.isEqual(other.startAt)
-        : other.startAt !== null
-    ) {
-      return false;
-    }
-
-    return this.endAt !== null
-      ? this.endAt.isEqual(other.endAt)
-      : other.endAt === null;
-  }
-
-  isDocumentQuery(): boolean {
-    return (
-      DocumentKey.isDocumentKey(this.path) &&
-      this.collectionGroup === null &&
-      this.filters.length === 0
-    );
-  }
 }
 
 class TargetImpl extends Target {
@@ -204,4 +151,52 @@ export function stringifyTarget(target: Target): string {
     str += ', endAt: ' + canonifyBound(target.endAt);
   }
   return `Target(${str})`;
+}
+
+export function targetEquals(left: Target, right: Target): boolean {
+  if (left.limit !== right.limit) {
+    return false;
+  }
+
+  if (left.orderBy.length !== right.orderBy.length) {
+    return false;
+  }
+
+  for (let i = 0; i < left.orderBy.length; i++) {
+    if (!left.orderBy[i].isEqual(right.orderBy[i])) {
+      return false;
+    }
+  }
+
+  if (left.filters.length !== right.filters.length) {
+    return false;
+  }
+
+  for (let i = 0; i < left.filters.length; i++) {
+    if (!filterEquals(left.filters[i], right.filters[i])) {
+      return false;
+    }
+  }
+
+  if (left.collectionGroup !== right.collectionGroup) {
+    return false;
+  }
+
+  if (!left.path.isEqual(right.path)) {
+    return false;
+  }
+
+  if (!boundEquals(left.startAt, right.startAt)) {
+    return false;
+  }
+
+  return boundEquals(left.endAt, right.endAt);
+}
+
+export function isDocumentTarget(target: Target): boolean {
+  return (
+    DocumentKey.isDocumentKey(target.path) &&
+    target.collectionGroup === null &&
+    target.filters.length === 0
+  );
 }
