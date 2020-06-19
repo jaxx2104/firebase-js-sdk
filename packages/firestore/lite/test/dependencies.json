@@ -3,18 +3,8 @@
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertBase64Available",
-                "assertPresent",
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -24,25 +14,7 @@
                 "formatPlural",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -50,11 +22,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -65,18 +33,9 @@
                 "validateExactNumberOfArgs",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "Blob",
@@ -89,76 +48,29 @@
                 "DocumentKey",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 78326
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 26906
->>>>>>> master
     },
     "CollectionReference": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -179,16 +91,9 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
                 "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -207,11 +112,8 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
+                "newTarget",
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -249,13 +151,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -279,11 +174,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -320,24 +210,12 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 109176
-=======
-        "sizeInBytes": 97203
->>>>>>> master
+        "sizeInBytes": 83512
     },
     "DocumentReference": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "fail",
@@ -345,25 +223,7 @@
                 "formatPlural",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -371,11 +231,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -384,18 +240,9 @@
                 "validateArgType",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -408,67 +255,27 @@
                 "DocumentReference",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 77116
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 24655
->>>>>>> master
     },
     "DocumentSnapshot": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "cast",
-                "coercedFieldValuesArray",
-=======
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "cast",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -485,23 +292,7 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-=======
-                "isPlainObject",
->>>>>>> master
                 "isServerTimestamp",
                 "isValidResourceName",
                 "loadProtos",
@@ -511,11 +302,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -530,18 +317,9 @@
                 "validateExactNumberOfArgs",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "Blob",
@@ -558,61 +336,29 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GeoPoint",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "QueryDocumentSnapshot",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "User",
                 "UserDataWriter"
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 85216
-=======
         "sizeInBytes": 37604
->>>>>>> master
     },
     "FieldPath": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
                 "cast",
-                "coercedFieldValuesArray",
-=======
-                "cast",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "fail",
@@ -620,25 +366,7 @@
                 "formatPlural",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -646,11 +374,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -659,18 +383,9 @@
                 "validateArgType",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -682,61 +397,24 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 77209
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 24748
->>>>>>> master
     },
     "FieldValue": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "fail",
@@ -744,25 +422,7 @@
                 "formatPlural",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -770,11 +430,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -783,18 +439,9 @@
                 "validateArgType",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -811,53 +458,20 @@
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "SerializableFieldValue",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 76708
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 24247
->>>>>>> master
     },
     "FirebaseFirestore": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "fail",
@@ -865,25 +479,7 @@
                 "formatPlural",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -891,11 +487,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -904,18 +496,9 @@
                 "validateArgType",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -926,891 +509,24 @@
                 "DocumentKey",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 76615
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 24154
->>>>>>> master
     },
     "GeoPoint": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-                "createMetadata",
-                "debugAssert",
-                "fail",
-                "formatPlural",
-                "geoPointEquals",
-                "getLocalWriteTime",
-                "hardAssert",
-                "invalidClassError",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
-                "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-                "loadProtos",
-                "logDebug",
-                "logError",
-                "logWarn",
-                "mapCodeFromRpcCode",
-                "newDatastore",
-                "newTarget",
-                "nodePromise",
-                "normalizeByteString",
-                "normalizeNumber",
-                "normalizeTimestamp",
-                "numberEquals",
-                "objectEquals",
-                "objectSize",
-                "ordinal",
-                "primitiveComparator",
-                "registerFirestore",
-                "serverTimestamp",
-                "timestampEquals",
-                "tryGetCustomObjectType",
-                "typeOrder",
-                "uint8ArrayFromBinaryString",
-                "validateArgType",
-                "validateExactNumberOfArgs",
-                "validateNamedArrayAtLeastNumberOfElements",
-                "validateType",
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "BaseFieldPath",
-                "BasePath",
-                "Bound",
-                "ByteString",
-                "DatabaseId",
-                "DatabaseInfo",
-                "Datastore",
-                "DatastoreImpl",
-                "Deferred",
-                "DeleteMutation",
-                "Document",
-                "DocumentKey",
-                "DocumentWatchChange",
-                "ExistenceFilter",
-                "ExistenceFilterChange",
-                "FieldFilter",
-                "FieldMask",
-                "FieldPath",
-                "FieldPath$1",
-                "FieldTransform",
-                "FirebaseCredentialsProvider",
-                "Firestore",
-                "FirestoreError",
-                "GeoPoint",
-                "GrpcConnection",
-                "JsonProtoSerializer",
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-                "OAuthToken",
-                "ObjectValue",
-                "ObjectValueBuilder",
-                "OrderBy",
-                "PatchMutation",
-                "PlatformSupport",
-                "Precondition",
-                "Query",
-                "ResourcePath",
-                "ServerTimestampTransform",
-                "SetMutation",
-                "SnapshotVersion",
-                "StreamBridge",
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 77708
-    },
-    "Query": {
-        "dependencies": {
-            "functions": [
-                "argToString",
-                "arrayEquals",
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "cast",
-                "coercedFieldValuesArray",
-                "createMetadata",
-                "debugAssert",
-                "errorMessage",
-                "fail",
-                "fieldMaskContains",
-                "fieldPathFromArgument",
-                "fieldPathFromArgument$1",
-                "fieldPathFromDotSeparatedString",
-                "forEach",
-                "formatPlural",
-                "fromDotSeparatedString",
-                "geoPointEquals",
-                "getLocalWriteTime",
-                "getPreviousValue",
-                "hardAssert",
-                "invalidClassError",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isEmpty",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
-                "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-                "isWrite",
-                "loadProtos",
-                "logDebug",
-                "logError",
-                "logWarn",
-                "looksLikeJsonObject",
-                "mapCodeFromRpcCode",
-                "newDatastore",
-                "newTarget",
-                "newUserDataReader",
-                "nodePromise",
-                "normalizeByteString",
-                "normalizeNumber",
-                "normalizeTimestamp",
-                "numberEquals",
-                "objectEquals",
-                "objectSize",
-                "ordinal",
-                "parseArray",
-                "parseData",
-                "parseObject",
-                "parseScalarValue",
-                "parseSentinelFieldValue",
-                "primitiveComparator",
-                "refValue",
-                "registerFirestore",
-                "serverTimestamp",
-                "timestampEquals",
-                "tryGetCustomObjectType",
-                "typeOrder",
-                "uint8ArrayFromBinaryString",
-                "validateArgType",
-                "validateExactNumberOfArgs",
-                "validateNamedArrayAtLeastNumberOfElements",
-                "validatePlainObject",
-                "validatePositiveNumber",
-                "validateType",
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "BaseFieldPath",
-                "BasePath",
-                "BaseQuery",
-                "Blob",
-                "Bound",
-                "ByteString",
-                "DatabaseId",
-                "DatabaseInfo",
-                "Datastore",
-                "DatastoreImpl",
-                "Deferred",
-                "DeleteFieldValueImpl",
-                "DeleteMutation",
-                "Document",
-                "DocumentKey",
-                "DocumentKeyReference",
-                "DocumentReference",
-                "DocumentSnapshot",
-                "DocumentWatchChange",
-                "ExistenceFilter",
-                "ExistenceFilterChange",
-                "FieldFilter",
-                "FieldMask",
-                "FieldPath",
-                "FieldPath$1",
-                "FieldPath$2",
-                "FieldTransform",
-                "FirebaseCredentialsProvider",
-                "Firestore",
-                "FirestoreError",
-                "GeoPoint",
-                "GrpcConnection",
-                "JsonProtoSerializer",
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-                "OAuthToken",
-                "ObjectValue",
-                "ObjectValueBuilder",
-                "OrderBy",
-                "ParseContext",
-                "ParsedSetData",
-                "ParsedUpdateData",
-                "PatchMutation",
-                "PlatformSupport",
-                "Precondition",
-                "Query",
-                "Query$1",
-                "QueryDocumentSnapshot",
-                "ResourcePath",
-                "SerializableFieldValue",
-                "ServerTimestampTransform",
-                "SetMutation",
-                "SnapshotVersion",
-                "StreamBridge",
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "UserDataReader",
-                "UserDataWriter",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 108780
-    },
-    "QueryDocumentSnapshot": {
-        "dependencies": {
-            "functions": [
-                "argToString",
-                "arrayEquals",
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "cast",
-                "coercedFieldValuesArray",
-                "createMetadata",
-                "debugAssert",
-                "errorMessage",
-                "fail",
-                "fieldPathFromArgument$1",
-                "fieldPathFromDotSeparatedString",
-                "forEach",
-                "formatPlural",
-                "fromDotSeparatedString",
-                "geoPointEquals",
-                "getLocalWriteTime",
-                "getPreviousValue",
-                "hardAssert",
-                "invalidClassError",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
-                "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-                "loadProtos",
-                "logDebug",
-                "logError",
-                "logWarn",
-                "mapCodeFromRpcCode",
-                "newDatastore",
-                "newTarget",
-                "nodePromise",
-                "normalizeByteString",
-                "normalizeNumber",
-                "normalizeTimestamp",
-                "numberEquals",
-                "objectEquals",
-                "objectSize",
-                "ordinal",
-                "primitiveComparator",
-                "registerFirestore",
-                "serverTimestamp",
-                "timestampEquals",
-                "tryGetCustomObjectType",
-                "typeOrder",
-                "uint8ArrayFromBinaryString",
-                "validateArgType",
-                "validateExactNumberOfArgs",
-                "validateNamedArrayAtLeastNumberOfElements",
-                "validateType",
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "BaseFieldPath",
-                "BasePath",
-                "Blob",
-                "Bound",
-                "ByteString",
-                "DatabaseId",
-                "DatabaseInfo",
-                "Datastore",
-                "DatastoreImpl",
-                "Deferred",
-                "DeleteMutation",
-                "Document",
-                "DocumentKey",
-                "DocumentKeyReference",
-                "DocumentReference",
-                "DocumentSnapshot",
-                "DocumentWatchChange",
-                "ExistenceFilter",
-                "ExistenceFilterChange",
-                "FieldFilter",
-                "FieldMask",
-                "FieldPath",
-                "FieldPath$1",
-                "FieldPath$2",
-                "FieldTransform",
-                "FirebaseCredentialsProvider",
-                "Firestore",
-                "FirestoreError",
-                "GeoPoint",
-                "GrpcConnection",
-                "JsonProtoSerializer",
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-                "OAuthToken",
-                "ObjectValue",
-                "ObjectValueBuilder",
-                "OrderBy",
-                "PatchMutation",
-                "PlatformSupport",
-                "Precondition",
-                "Query",
-                "QueryDocumentSnapshot",
-                "ResourcePath",
-                "ServerTimestampTransform",
-                "SetMutation",
-                "SnapshotVersion",
-                "StreamBridge",
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "UserDataWriter",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 85221
-    },
-    "QuerySnapshot": {
-        "dependencies": {
-            "functions": [
-                "argToString",
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-                "createMetadata",
-                "debugAssert",
-                "fail",
-                "formatPlural",
-                "geoPointEquals",
-                "getLocalWriteTime",
-                "hardAssert",
-                "invalidClassError",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
-                "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-                "loadProtos",
-                "logDebug",
-                "logError",
-                "logWarn",
-                "mapCodeFromRpcCode",
-                "newDatastore",
-                "newTarget",
-                "nodePromise",
-                "normalizeByteString",
-                "normalizeNumber",
-                "normalizeTimestamp",
-                "numberEquals",
-                "objectEquals",
-                "objectSize",
-                "ordinal",
-                "primitiveComparator",
-                "registerFirestore",
-                "serverTimestamp",
-                "timestampEquals",
-                "tryGetCustomObjectType",
-                "typeOrder",
-                "uint8ArrayFromBinaryString",
-                "validateArgType",
-                "validateNamedArrayAtLeastNumberOfElements",
-                "validateType",
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "BaseFieldPath",
-                "BasePath",
-                "Bound",
-                "ByteString",
-                "DatabaseId",
-                "DatabaseInfo",
-                "Datastore",
-                "DatastoreImpl",
-                "Deferred",
-                "DeleteMutation",
-                "Document",
-                "DocumentKey",
-                "DocumentWatchChange",
-                "ExistenceFilter",
-                "ExistenceFilterChange",
-                "FieldFilter",
-                "FieldMask",
-                "FieldPath",
-                "FieldPath$1",
-                "FieldTransform",
-                "FirebaseCredentialsProvider",
-                "Firestore",
-                "FirestoreError",
-                "GrpcConnection",
-                "JsonProtoSerializer",
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-                "OAuthToken",
-                "ObjectValue",
-                "ObjectValueBuilder",
-                "OrderBy",
-                "PatchMutation",
-                "PlatformSupport",
-                "Precondition",
-                "Query",
-                "QuerySnapshot",
-                "ResourcePath",
-                "ServerTimestampTransform",
-                "SetMutation",
-                "SnapshotVersion",
-                "StreamBridge",
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 76849
-    },
-    "Timestamp": {
-        "dependencies": {
-            "functions": [
-                "argToString",
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-                "createMetadata",
-                "debugAssert",
-                "fail",
-                "formatPlural",
-                "geoPointEquals",
-                "getLocalWriteTime",
-                "hardAssert",
-                "invalidClassError",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
-                "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-                "loadProtos",
-                "logDebug",
-                "logError",
-                "logWarn",
-                "mapCodeFromRpcCode",
-                "newDatastore",
-                "newTarget",
-                "nodePromise",
-                "normalizeByteString",
-                "normalizeNumber",
-                "normalizeTimestamp",
-                "numberEquals",
-                "objectEquals",
-                "objectSize",
-                "ordinal",
-                "primitiveComparator",
-                "registerFirestore",
-                "serverTimestamp",
-                "timestampEquals",
-                "tryGetCustomObjectType",
-                "typeOrder",
-                "uint8ArrayFromBinaryString",
-                "validateArgType",
-                "validateNamedArrayAtLeastNumberOfElements",
-                "validateType",
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "BaseFieldPath",
-                "BasePath",
-                "Bound",
-                "ByteString",
-                "DatabaseId",
-                "DatabaseInfo",
-                "Datastore",
-                "DatastoreImpl",
-                "Deferred",
-                "DeleteMutation",
-                "Document",
-                "DocumentKey",
-                "DocumentWatchChange",
-                "ExistenceFilter",
-                "ExistenceFilterChange",
-                "FieldFilter",
-                "FieldMask",
-                "FieldPath",
-                "FieldPath$1",
-                "FieldTransform",
-                "FirebaseCredentialsProvider",
-                "Firestore",
-                "FirestoreError",
-                "GrpcConnection",
-                "JsonProtoSerializer",
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-                "OAuthToken",
-                "ObjectValue",
-                "ObjectValueBuilder",
-                "OrderBy",
-                "PatchMutation",
-                "PlatformSupport",
-                "Precondition",
-                "Query",
-                "ResourcePath",
-                "ServerTimestampTransform",
-                "SetMutation",
-                "SnapshotVersion",
-                "StreamBridge",
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 76594
-    },
-    "Transaction": {
-        "dependencies": {
-            "functions": [
-                "applyFirestoreDataConverter",
-                "argToString",
-                "arrayEquals",
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "cast",
-                "coercedFieldValuesArray",
-                "createMetadata",
-                "debugAssert",
-                "errorMessage",
-                "fail",
-                "fieldMaskContains",
-                "fieldPathFromArgument",
-                "fieldPathFromArgument$1",
-                "fieldPathFromDotSeparatedString",
-                "forEach",
-                "formatPlural",
-                "fromDotSeparatedString",
-                "geoPointEquals",
-                "getLocalWriteTime",
-                "getPreviousValue",
-                "hardAssert",
-                "invalidClassError",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isEmpty",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
-                "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-                "isWrite",
-                "loadProtos",
-                "logDebug",
-                "logError",
-                "logWarn",
-                "looksLikeJsonObject",
-                "mapCodeFromRpcCode",
-                "newDatastore",
-                "newTarget",
-                "newUserDataReader",
-                "nodePromise",
-                "normalizeByteString",
-                "normalizeNumber",
-                "normalizeTimestamp",
-                "numberEquals",
-                "objectEquals",
-                "objectSize",
-                "ordinal",
-                "parseArray",
-                "parseData",
-                "parseObject",
-                "parseScalarValue",
-                "parseSentinelFieldValue",
-                "primitiveComparator",
-                "registerFirestore",
-                "serverTimestamp",
-                "timestampEquals",
-                "tryGetCustomObjectType",
-                "typeOrder",
-                "uint8ArrayFromBinaryString",
-                "validateArgType",
-                "validateExactNumberOfArgs",
-                "validateNamedArrayAtLeastNumberOfElements",
-                "validatePlainObject",
-                "validateReference",
-                "validateType",
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "BaseFieldPath",
-                "BasePath",
-                "Blob",
-                "Bound",
-                "ByteString",
-                "DatabaseId",
-                "DatabaseInfo",
-                "Datastore",
-                "DatastoreImpl",
-                "Deferred",
-                "DeleteFieldValueImpl",
-                "DeleteMutation",
-                "Document",
-                "DocumentKey",
-                "DocumentKeyReference",
-                "DocumentReference",
-                "DocumentSnapshot",
-                "DocumentWatchChange",
-                "ExistenceFilter",
-                "ExistenceFilterChange",
-                "FieldFilter",
-                "FieldMask",
-                "FieldPath",
-                "FieldPath$1",
-                "FieldPath$2",
-                "FieldTransform",
-                "FirebaseCredentialsProvider",
-                "Firestore",
-                "FirestoreError",
-                "GeoPoint",
-                "GrpcConnection",
-                "JsonProtoSerializer",
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-                "OAuthToken",
-                "ObjectValue",
-                "ObjectValueBuilder",
-                "OrderBy",
-                "ParseContext",
-                "ParsedSetData",
-                "ParsedUpdateData",
-                "PatchMutation",
-                "PlatformSupport",
-                "Precondition",
-                "Query",
-                "QueryDocumentSnapshot",
-                "ResourcePath",
-                "SerializableFieldValue",
-                "ServerTimestampTransform",
-                "SetMutation",
-                "SnapshotVersion",
-                "StreamBridge",
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "Transaction$1",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "UserDataReader",
-                "UserDataWriter",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 99644
-    },
-    "WriteBatch": {
-        "dependencies": {
-            "functions": [
-                "applyFirestoreDataConverter",
-                "argToString",
-                "arrayEquals",
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "cast",
-                "coercedFieldValuesArray",
-=======
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "fail",
@@ -1818,28 +534,7 @@
                 "formatPlural",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "invokeCommitRpc",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isEmpty",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-                "isWrite",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -1847,12 +542,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-                "newUserDataReader",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -1862,18 +552,9 @@
                 "validateExactNumberOfArgs",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -1884,80 +565,30 @@
                 "DocumentKey",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldPath$2",
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GeoPoint",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "UserDataReader",
-                "VerifyMutation",
-                "WatchTargetChange",
-                "WriteBatch"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 96121
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 25247
->>>>>>> master
     },
     "Query": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -1978,16 +609,8 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
-                "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -2005,11 +628,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -2047,14 +666,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "AutoId",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -2077,11 +688,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -2106,11 +712,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -2120,30 +721,15 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 111661
-=======
-        "sizeInBytes": 88429
->>>>>>> master
+        "sizeInBytes": 77642
     },
     "QueryDocumentSnapshot": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "arrayRemove",
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "cast",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -2160,24 +746,7 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isEmpty",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-=======
-                "isPlainObject",
->>>>>>> master
                 "isServerTimestamp",
                 "isValidResourceName",
                 "loadProtos",
@@ -2187,11 +756,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -2206,19 +771,9 @@
                 "validateExactNumberOfArgs",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveFieldValueImpl",
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "Blob",
@@ -2350,45 +905,20 @@
                 "DocumentKey",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-                "FieldValue",
-                "FieldValueDelegate",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "User"
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 86919
-=======
         "sizeInBytes": 25690
->>>>>>> master
     },
     "Transaction": {
         "dependencies": {
@@ -2396,20 +926,10 @@
                 "applyFirestoreDataConverter",
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "arrayUnion",
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -2430,16 +950,7 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
-                "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNegativeZero",
                 "isPlainObject",
@@ -2455,12 +966,8 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
                 "newUserDataReader",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -2496,12 +1003,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionFieldValueImpl",
-                "ArrayUnionTransformOperation",
-=======
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "Blob",
@@ -2520,13 +1021,7 @@
                 "FieldMask",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-                "FieldValue",
-                "FieldValueDelegate",
-=======
                 "FieldPath$2",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -2550,11 +1045,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "Transaction$1",
                 "TransformMutation",
@@ -2565,11 +1055,7 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 86912
-=======
         "sizeInBytes": 68364
->>>>>>> master
     },
     "WriteBatch": {
         "dependencies": {
@@ -2577,20 +1063,11 @@
                 "applyFirestoreDataConverter",
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
                 "coercedFieldValuesArray",
-<<<<<<< HEAD
-                "collection",
-=======
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "debugCast",
@@ -2613,10 +1090,8 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
-                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
-                "isInequalityFilter",
                 "isInteger",
                 "isMapValue",
                 "isNegativeZero",
@@ -2633,11 +1108,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -2703,10 +1174,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -2731,11 +1198,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -2746,11 +1208,7 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 109804
-=======
         "sizeInBytes": 72158
->>>>>>> master
     },
     "addDoc": {
         "dependencies": {
@@ -2759,29 +1217,11 @@
                 "applyFirestoreDataConverter",
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
                 "coercedFieldValuesArray",
-<<<<<<< HEAD
-                "collectionGroup",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "debugCast",
@@ -2831,11 +1271,8 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
+                "newTarget",
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -2910,11 +1347,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -2955,28 +1387,17 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 109235
-=======
-        "sizeInBytes": 107641
->>>>>>> master
+        "sizeInBytes": 94010
     },
     "arrayRemove": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "cast",
-=======
                 "arrayRemove",
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
->>>>>>> master
                 "coercedFieldValuesArray",
                 "createMetadata",
                 "debugAssert",
@@ -2992,16 +1413,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
-<<<<<<< HEAD
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-=======
                 "isEmpty",
->>>>>>> master
                 "isNegativeZero",
                 "isPlainObject",
                 "isSafeInteger",
@@ -3015,11 +1427,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -3055,10 +1463,7 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-=======
                 "ArrayRemoveFieldValueImpl",
->>>>>>> master
                 "ArrayRemoveTransformOperation",
                 "BaseFieldPath",
                 "BasePath",
@@ -3074,59 +1479,33 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldTransform",
-<<<<<<< HEAD
-=======
                 "FieldValue",
                 "FieldValueDelegate",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GeoPoint",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ParseContext",
                 "ResourcePath",
                 "SerializableFieldValue",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "User"
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 78169
-=======
         "sizeInBytes": 44182
->>>>>>> master
     },
     "arrayUnion": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertPresent",
-=======
                 "arrayUnion",
                 "assertUint8ArrayAvailable",
->>>>>>> master
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "coercedFieldValuesArray",
@@ -3144,16 +1523,7 @@
                 "hardAssert",
                 "invalidClassError",
                 "isArray",
-<<<<<<< HEAD
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-=======
                 "isEmpty",
->>>>>>> master
                 "isNegativeZero",
                 "isPlainObject",
                 "isSafeInteger",
@@ -3167,11 +1537,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -3207,11 +1573,7 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-=======
                 "ArrayUnionFieldValueImpl",
->>>>>>> master
                 "ArrayUnionTransformOperation",
                 "BaseFieldPath",
                 "BasePath",
@@ -3235,65 +1597,28 @@
                 "GeoPoint",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ParseContext",
                 "ResourcePath",
                 "SerializableFieldValue",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "User"
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 77782
-=======
         "sizeInBytes": 44190
->>>>>>> master
     },
     "collection": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
                 "collection",
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -3314,16 +1639,9 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
                 "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -3342,11 +1660,8 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
+                "newTarget",
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -3385,14 +1700,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "AutoId",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -3416,11 +1723,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -3457,39 +1759,18 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 110492
-=======
-        "sizeInBytes": 97831
->>>>>>> master
+        "sizeInBytes": 84140
     },
     "collectionGroup": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertPresent",
-=======
-                "arrayValueContains",
                 "assertUint8ArrayAvailable",
->>>>>>> master
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
                 "collectionGroup",
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -3510,15 +1791,9 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
                 "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-=======
                 "isEmpty",
->>>>>>> master
+                "isInequalityFilter",
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -3537,12 +1812,9 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
+                "newTarget",
                 "newUserDataReader",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -3579,13 +1851,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -3608,11 +1873,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -3649,23 +1909,13 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 77259
-=======
-        "sizeInBytes": 97262
->>>>>>> master
+        "sizeInBytes": 83571
     },
     "deleteDoc": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-                "assertUint8ArrayAvailable",
-=======
->>>>>>> master
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
@@ -3687,18 +1937,12 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
-                "isDocumentTarget",
                 "isDouble",
-                "isInequalityFilter",
                 "isInteger",
                 "isMapValue",
                 "isNegativeZero",
                 "isNumber",
                 "isPlainObject",
-<<<<<<< HEAD
-                "isSafeInteger",
-=======
->>>>>>> master
                 "isServerTimestamp",
                 "loadProtos",
                 "logDebug",
@@ -3707,11 +1951,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -3762,11 +2002,6 @@
                 "DocumentReference",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldPath$2",
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -3786,11 +2021,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -3799,47 +2029,12 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 86407
-=======
         "sizeInBytes": 53665
->>>>>>> master
     },
     "deleteField": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-                "createMetadata",
-                "debugAssert",
-                "fail",
-                "formatPlural",
-                "geoPointEquals",
-                "getFirestore",
-                "getLocalWriteTime",
-                "hardAssert",
-                "invalidClassError",
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
-                "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
                 "createMetadata",
                 "debugAssert",
                 "deleteField",
@@ -3849,7 +2044,6 @@
                 "hardAssert",
                 "invalidClassError",
                 "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -3857,11 +2051,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -3870,18 +2060,9 @@
                 "validateArgType",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -3893,79 +2074,32 @@
                 "DocumentKey",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
                 "FieldValue",
                 "FieldValueDelegate",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "SerializableFieldValue",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 76694
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 25321
->>>>>>> master
     },
     "doc": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -3987,16 +2121,9 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
                 "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -4015,11 +2142,8 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
+                "newTarget",
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -4059,14 +2183,7 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
                 "AutoId",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -4090,11 +2207,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -4131,11 +2243,7 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 110114
-=======
-        "sizeInBytes": 98652
->>>>>>> master
+        "sizeInBytes": 84961
     },
     "documentId": {
         "dependencies": {
@@ -4200,19 +2308,11 @@
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-=======
->>>>>>> master
                 "assertPresent",
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
                 "cast",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "debugCast",
@@ -4242,24 +2342,11 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isEmpty",
-                "isInequalityFilter",
-                "isInteger",
-=======
                 "invokeBatchGetDocumentsRpc",
->>>>>>> master
                 "isMapValue",
                 "isNegativeZero",
                 "isNullOrUndefined",
                 "isPlainObject",
-<<<<<<< HEAD
-                "isSafeInteger",
-=======
->>>>>>> master
                 "isServerTimestamp",
                 "isValidResourceName",
                 "loadProtos",
@@ -4269,11 +2356,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -4298,11 +2381,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "Blob",
@@ -4319,13 +2397,7 @@
                 "DocumentSnapshot",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-                "FieldValue",
-                "FieldValueDelegate",
-=======
                 "FieldPath$2",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -4336,43 +2408,6 @@
                 "NoDocument",
                 "OAuthToken",
                 "ObjectValue",
-<<<<<<< HEAD
-                "ObjectValueBuilder",
-                "OrderBy",
-                "ParseContext",
-                "PatchMutation",
-                "PlatformSupport",
-                "Precondition",
-                "Query",
-                "ResourcePath",
-                "SerializableFieldValue",
-                "ServerTimestampTransform",
-                "SetMutation",
-                "SnapshotVersion",
-                "StreamBridge",
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 86519
-    },
-    "initializeFirestore": {
-        "dependencies": {
-            "functions": [
-                "argToString",
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
                 "QueryDocumentSnapshot",
                 "ResourcePath",
                 "SnapshotVersion",
@@ -4389,7 +2424,6 @@
         "dependencies": {
             "functions": [
                 "argToString",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "fail",
@@ -4398,25 +2432,7 @@
                 "getFirestore",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -4424,11 +2440,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -4437,18 +2449,9 @@
                 "validateArgType",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -4459,76 +2462,29 @@
                 "DocumentKey",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 76780
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 24233
->>>>>>> master
     },
     "getQuery": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "debugCast",
@@ -4559,16 +2515,8 @@
                 "hardAssert",
                 "invalidClassError",
                 "invokeRunQueryRpc",
-                "isArray",
-<<<<<<< HEAD
-                "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -4587,11 +2535,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -4640,13 +2584,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -4669,11 +2606,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -4699,11 +2631,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -4713,44 +2640,21 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 109519
-=======
-        "sizeInBytes": 94348
->>>>>>> master
+        "sizeInBytes": 83561
     },
     "increment": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
-                "boundEquals",
-                "cast",
-                "coercedFieldValuesArray",
-=======
-                "assertUint8ArrayAvailable",
-                "binaryStringFromUint8Array",
-                "blobEquals",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
                 "encodeBase64",
                 "fail",
-<<<<<<< HEAD
-                "fieldMaskContains",
-                "fieldPathFromArgument",
-                "fieldPathFromArgument$1",
-                "fieldPathFromDotSeparatedString",
-                "filterEquals",
-=======
->>>>>>> master
                 "forEach",
                 "formatJSON",
                 "formatPlural",
@@ -4760,14 +2664,8 @@
                 "hardAssert",
                 "increment",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-=======
->>>>>>> master
                 "isDouble",
                 "isEmpty",
-                "isInequalityFilter",
                 "isInteger",
                 "isNegativeZero",
                 "isNumber",
@@ -4783,12 +2681,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-                "newUserDataReader",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -4803,16 +2696,7 @@
                 "parseScalarValue",
                 "parseSentinelFieldValue",
                 "primitiveComparator",
-<<<<<<< HEAD
-                "queryEqual",
-                "queryEquals",
-                "refValue",
                 "registerFirestore",
-                "serverTimestamp",
-                "targetEquals",
-=======
-                "registerFirestore",
->>>>>>> master
                 "timestampEquals",
                 "toBytes",
                 "toDouble",
@@ -4832,11 +2716,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "Blob",
@@ -4851,48 +2730,27 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldTransform",
-<<<<<<< HEAD
-=======
                 "FieldValue",
                 "FieldValueDelegate",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GeoPoint",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-=======
                 "NumericIncrementFieldValueImpl",
->>>>>>> master
                 "NumericIncrementTransformOperation",
                 "OAuthToken",
                 "ParseContext",
                 "ResourcePath",
                 "SerializableFieldValue",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "User"
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 110210
-=======
         "sizeInBytes": 44121
->>>>>>> master
     },
     "initializeFirestore": {
         "dependencies": {
@@ -4955,28 +2813,10 @@
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -4997,16 +2837,9 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
                 "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -5025,11 +2858,8 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
+                "newTarget",
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -5068,13 +2898,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -5098,11 +2921,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -5139,39 +2957,18 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 109461
-=======
-        "sizeInBytes": 97546
->>>>>>> master
+        "sizeInBytes": 83855
     },
     "queryEqual": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
+                "boundEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -5182,6 +2979,7 @@
                 "fieldPathFromArgument",
                 "fieldPathFromArgument$1",
                 "fieldPathFromDotSeparatedString",
+                "filterEquals",
                 "forEach",
                 "formatJSON",
                 "formatPlural",
@@ -5192,17 +2990,8 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
-                "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
-                "isIndexedDbTransactionError",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -5220,11 +3009,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -5241,8 +3026,10 @@
                 "parseSentinelFieldValue",
                 "primitiveComparator",
                 "queryEqual",
+                "queryEquals",
                 "refValue",
                 "registerFirestore",
+                "targetEquals",
                 "timestampEquals",
                 "toBytes",
                 "toDouble",
@@ -5263,14 +3050,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-                "AsyncQueue",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -5293,11 +3072,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -5322,11 +3096,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -5336,45 +3105,17 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 112340
-=======
-        "sizeInBytes": 88633
->>>>>>> master
+        "sizeInBytes": 79072
     },
     "refEqual": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-                "coercedFieldValuesArray",
-=======
-                "arrayValueContains",
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
-                "canonicalId",
-                "canonifyArray",
-                "canonifyByteString",
-                "canonifyGeoPoint",
-                "canonifyMap",
-                "canonifyReference",
-                "canonifyTimestamp",
-                "canonifyValue",
                 "cast",
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -5395,15 +3136,9 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
                 "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-=======
                 "isEmpty",
->>>>>>> master
+                "isInequalityFilter",
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -5422,12 +3157,9 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
+                "newTarget",
                 "newUserDataReader",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -5465,13 +3197,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -5494,14 +3219,7 @@
                 "FieldMask",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-                "FieldValue",
-                "FieldValueDelegate",
-=======
                 "FieldPath$2",
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -5538,11 +3256,7 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 77481
-=======
-        "sizeInBytes": 97488
->>>>>>> master
+        "sizeInBytes": 83797
     },
     "runTransaction": {
         "dependencies": {
@@ -5550,10 +3264,6 @@
                 "applyFirestoreDataConverter",
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-=======
->>>>>>> master
                 "assertPresent",
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
@@ -5595,14 +3305,9 @@
                 "invokeBatchGetDocumentsRpc",
                 "invokeCommitRpc",
                 "isArray",
-                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
-<<<<<<< HEAD
-                "isInequalityFilter",
-=======
                 "isIndexedDbTransactionError",
->>>>>>> master
                 "isInteger",
                 "isMapValue",
                 "isNegativeZero",
@@ -5622,11 +3327,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -5696,11 +3397,7 @@
                 "FieldMask",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
                 "FieldPath$2",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -5726,11 +3423,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "Transaction",
                 "Transaction$1",
@@ -5744,11 +3436,7 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 94420
-=======
         "sizeInBytes": 90952
->>>>>>> master
     },
     "serverTimestamp": {
         "dependencies": {
@@ -5819,16 +3507,10 @@
                 "applyFirestoreDataConverter",
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
-=======
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "cast",
->>>>>>> master
                 "coercedFieldValuesArray",
                 "createMetadata",
                 "debugAssert",
@@ -5852,13 +3534,8 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
-                "isDocumentTarget",
                 "isDouble",
-<<<<<<< HEAD
-                "isInequalityFilter",
-=======
                 "isEmpty",
->>>>>>> master
                 "isInteger",
                 "isMapValue",
                 "isNegativeZero",
@@ -5875,12 +3552,8 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
                 "newUserDataReader",
->>>>>>> master
                 "nodePromise",
                 "normalizeByteString",
                 "normalizeNumber",
@@ -5944,10 +3617,6 @@
                 "FieldMask",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -5972,11 +3641,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -6042,40 +3706,18 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 76659
-=======
         "sizeInBytes": 24198
->>>>>>> master
     },
     "snapshotEqual": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
-                "arrayValueContains",
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
                 "boundEquals",
                 "cast",
-<<<<<<< HEAD
-                "coercedFieldValuesArray",
-=======
-                "compareArrays",
-                "compareBlobs",
-                "compareDocumentsByField",
-                "compareGeoPoints",
-                "compareMaps",
-                "compareNumbers",
-                "compareReferences",
-                "compareTimestamps",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "decodeBase64",
@@ -6097,16 +3739,8 @@
                 "getPreviousValue",
                 "hardAssert",
                 "invalidClassError",
-                "isArray",
-<<<<<<< HEAD
-                "isDocumentTarget",
-                "isDouble",
                 "isEmpty",
                 "isInequalityFilter",
-                "isInteger",
-=======
-                "isEmpty",
->>>>>>> master
                 "isMapValue",
                 "isNanValue",
                 "isNegativeZero",
@@ -6124,11 +3758,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -6170,13 +3800,6 @@
                 "valueEquals"
             ],
             "classes": [
-<<<<<<< HEAD
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
-                "ArrayContainsAnyFilter",
-                "ArrayContainsFilter",
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "BaseQuery",
@@ -6199,11 +3822,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
-                "Filter",
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -6229,11 +3847,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -6243,26 +3856,13 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 110943
-=======
-        "sizeInBytes": 89366
->>>>>>> master
+        "sizeInBytes": 79805
     },
     "terminate": {
         "dependencies": {
             "functions": [
                 "argToString",
-<<<<<<< HEAD
-                "arrayEquals",
-                "assertPresent",
-                "binaryStringFromUint8Array",
-                "blobEquals",
                 "cast",
-                "coercedFieldValuesArray",
-=======
-                "cast",
->>>>>>> master
                 "createMetadata",
                 "debugAssert",
                 "debugCast",
@@ -6271,25 +3871,7 @@
                 "formatPlural",
                 "hardAssert",
                 "invalidClassError",
-<<<<<<< HEAD
-                "isArray",
-                "isDocumentTarget",
-                "isDouble",
-                "isInequalityFilter",
-                "isInteger",
-                "isMapValue",
-                "isNanValue",
-                "isNegativeZero",
-                "isNullOrUndefined",
-                "isNullValue",
-                "isNumber",
                 "isPlainObject",
-                "isSafeInteger",
-                "isServerTimestamp",
-                "isValidResourceName",
-=======
-                "isPlainObject",
->>>>>>> master
                 "loadProtos",
                 "logDebug",
                 "logError",
@@ -6297,11 +3879,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "nodePromise",
                 "ordinal",
                 "primitiveComparator",
@@ -6312,18 +3890,9 @@
                 "validateArgType",
                 "validateNamedArrayAtLeastNumberOfElements",
                 "validateType",
-<<<<<<< HEAD
-                "valueDescription",
-                "valueEquals"
-            ],
-            "classes": [
-                "ArrayRemoveTransformOperation",
-                "ArrayUnionTransformOperation",
-=======
                 "valueDescription"
             ],
             "classes": [
->>>>>>> master
                 "BaseFieldPath",
                 "BasePath",
                 "DatabaseId",
@@ -6334,59 +3903,25 @@
                 "DocumentKey",
                 "FieldPath",
                 "FieldPath$1",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
                 "GrpcConnection",
                 "JsonProtoSerializer",
-<<<<<<< HEAD
-                "MaybeDocument",
-                "Mutation",
-                "MutationResult",
-                "NoDocument",
-                "NodePlatform",
-                "NoopConnectivityMonitor",
-                "NumericIncrementTransformOperation",
-=======
->>>>>>> master
                 "OAuthToken",
                 "ResourcePath",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-                "Timestamp",
-                "TransformMutation",
-                "UnknownDocument",
-                "User",
-                "VerifyMutation",
-                "WatchTargetChange"
-            ],
-            "variables": []
-        },
-        "sizeInBytes": 77452
-=======
                 "User"
             ],
             "variables": []
         },
         "sizeInBytes": 24991
->>>>>>> master
     },
     "updateDoc": {
         "dependencies": {
             "functions": [
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
@@ -6414,10 +3949,8 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
-                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
-                "isInequalityFilter",
                 "isInteger",
                 "isMapValue",
                 "isNegativeZero",
@@ -6434,11 +3967,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -6504,10 +4033,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -6532,11 +4057,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -6546,11 +4066,7 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 94511
-=======
         "sizeInBytes": 70548
->>>>>>> master
     },
     "writeBatch": {
         "dependencies": {
@@ -6558,11 +4074,6 @@
                 "applyFirestoreDataConverter",
                 "argToString",
                 "arrayEquals",
-<<<<<<< HEAD
-                "assertBase64Available",
-                "assertPresent",
-=======
->>>>>>> master
                 "assertUint8ArrayAvailable",
                 "binaryStringFromUint8Array",
                 "blobEquals",
@@ -6590,10 +4101,8 @@
                 "invalidClassError",
                 "invokeCommitRpc",
                 "isArray",
-                "isDocumentTarget",
                 "isDouble",
                 "isEmpty",
-                "isInequalityFilter",
                 "isInteger",
                 "isMapValue",
                 "isNegativeZero",
@@ -6610,11 +4119,7 @@
                 "mapCodeFromRpcCode",
                 "newConnection",
                 "newDatastore",
-<<<<<<< HEAD
-                "newTarget",
-=======
                 "newSerializer",
->>>>>>> master
                 "newUserDataReader",
                 "nodePromise",
                 "normalizeByteString",
@@ -6681,10 +4186,6 @@
                 "FieldPath",
                 "FieldPath$1",
                 "FieldPath$2",
-<<<<<<< HEAD
-                "FieldTransform",
-=======
->>>>>>> master
                 "FirebaseCredentialsProvider",
                 "Firestore",
                 "FirestoreError",
@@ -6709,11 +4210,6 @@
                 "SetMutation",
                 "SnapshotVersion",
                 "StreamBridge",
-<<<<<<< HEAD
-                "Target",
-                "TargetImpl",
-=======
->>>>>>> master
                 "Timestamp",
                 "TransformMutation",
                 "UnknownDocument",
@@ -6724,10 +4220,6 @@
             ],
             "variables": []
         },
-<<<<<<< HEAD
-        "sizeInBytes": 96201
-=======
         "sizeInBytes": 72238
->>>>>>> master
     }
 }
