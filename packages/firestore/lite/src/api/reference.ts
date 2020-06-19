@@ -47,7 +47,6 @@ import {
 } from '../../../src/remote/datastore';
 import { hardAssert } from '../../../src/util/assert';
 import { DeleteMutation, Precondition } from '../../../src/model/mutation';
-import { PlatformSupport } from '../../../src/platform/platform';
 import {
   applyFirestoreDataConverter,
   BaseQuery
@@ -61,6 +60,7 @@ import {
   validateExactNumberOfArgs,
   validatePositiveNumber
 } from '../../../src/util/input_validation';
+import { newSerializer } from '../../../src/platform/serializer';
 import { FieldPath as ExternalFieldPath } from '../../../src/api/field_path';
 import { Code, FirestoreError } from '../../../src/util/error';
 
@@ -593,9 +593,7 @@ export function queryEqual<T>(
 
 export function newUserDataReader(firestore: Firestore): UserDataReader {
   const settings = firestore._getSettings();
-  const serializer = PlatformSupport.getPlatform().newSerializer(
-    firestore._databaseId
-  );
+  const serializer = newSerializer(firestore._databaseId);
   return new UserDataReader(
     firestore._databaseId,
     !!settings.ignoreUndefinedProperties,
